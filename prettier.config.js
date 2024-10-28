@@ -1,3 +1,5 @@
+// @see: https://www.prettier.cn
+
 export default  {
   printWidth: 100, // 最大行长规则通常设置为 100 或 120。
   tabWidth: 2, // 指定每个标签缩进级别的空格数。

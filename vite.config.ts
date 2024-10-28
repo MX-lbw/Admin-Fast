@@ -17,7 +17,7 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import { viteMockServe } from "vite-plugin-mock";
 // 代码检查
 import eslintPlugin from 'vite-plugin-eslint';
-// https://vitejs.dev/config/
+//@see  https://vitejs.dev/config/
 export default defineConfig(({ command, mode }: ConfigEnv): UserConfig =>{
 // 环境变量
 const env = loadEnv(mode, process.cwd());
