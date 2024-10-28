@@ -1,10 +1,7 @@
 <template>
-  <div> 123 </div>
+  <div class="a"> 123 </div>
 </template>
 
-<script setup lang="ts" name="HelloWord">
-  let a: number = 1;
-  console.log(a);
-</script>
+<script setup lang="ts" name="HelloWord"></script>
 
-<style scoped></style>
+<style scoped lang="scss"></style>

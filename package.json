@@ -24,6 +24,7 @@
     "prettier": "^3.3.3",
     "rimraf": "^6.0.1",
     "rollup-plugin-visualizer": "^5.12.0",
+    "sass": "^1.80.4",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.11.0",
     "unplugin-auto-import": "^0.18.2",

@@ -53,6 +53,14 @@ const env = loadEnv(mode, process.cwd());
       removeConsole(),
       VueSetupExtend(),
     ],
+    css:{
+      // 预处理器配置项
+      preprocessorOptions:{
+        scss:{
+          // additionalData: `@import "@/assets/styles/global.scss";`
+        }
+      }
+    },
     resolve: {
       alias: {
         "@": path.resolve(__dirname, "src"),
@@ -73,6 +81,7 @@ const env = loadEnv(mode, process.cwd());
         },
       },
     },
+
   }
 }
 );
