@@ -1,10 +1,9 @@
-<script setup lang="ts" >
-import HelloWord from "Components/HelloWord.vue";
-
+<script setup lang="ts">
+  import HelloWord from 'Components/HelloWord.vue';
 </script>
 
 <template>
-<HelloWord />
+  <HelloWord />
 </template>
 
 <style scoped></style>

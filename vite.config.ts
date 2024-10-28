@@ -16,7 +16,7 @@ import { visualizer } from 'rollup-plugin-visualizer';
 // 数据mock配置
 import { viteMockServe } from "vite-plugin-mock";
 // 代码检查
-// import eslintPlugin from 'vite-plugin-eslint';
+import eslintPlugin from 'vite-plugin-eslint';
 // https://vitejs.dev/config/
 export default defineConfig(({ command, mode }: ConfigEnv): UserConfig =>{
 // 环境变量
@@ -43,12 +43,12 @@ const env = loadEnv(mode, process.cwd());
         logger: true, //是否在控制台显示请求日志
         enable: command === "serve", //设置是否启用本地 xxx.ts 文件，不要在生产环境中打开它.设置为 false 将禁用 mock 功能
       }),
-      // eslintPlugin({
-      //   include: ['src/**/*.js', 'src/**/*.vue', 'src/**/*.ts'],    // 指定需要检查的文件
-      //   exclude: ['node_modules/**', 'dist/**'],    // 指定不需要检查的文件
-      //   fix: true,    // 是否自动修复
-      //   cache: false    // 是否启用缓存
-      // }),
+      eslintPlugin({
+        include: ['src/**/*.js', 'src/**/*.vue', 'src/**/*.ts'],    // 指定需要检查的文件
+        exclude: ['node_modules/**', 'dist/**'],    // 指定不需要检查的文件
+        fix: true,    // 是否自动修复
+        cache: false    // 是否启用缓存
+      }),
       visualizer(),
       removeConsole(),
       VueSetupExtend(),
