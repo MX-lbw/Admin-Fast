@@ -17,6 +17,8 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import { viteMockServe } from "vite-plugin-mock";
 // 代码检查
 import eslintPlugin from 'vite-plugin-eslint';
+//Vue 开发调试定位工具
+import VueDevToolsPlugin from 'vite-plugin-vue-devtools';
 //@see  https://vitejs.dev/config/
 export default defineConfig(({ command, mode }: ConfigEnv): UserConfig =>{
 // 环境变量
@@ -52,6 +54,9 @@ const env = loadEnv(mode, process.cwd());
       visualizer(),
       removeConsole(),
       VueSetupExtend(),
+      VueDevToolsPlugin({
+        launchEditor: 'webstorm',
+      })
     ],
     css:{
       // 预处理器配置项
