@@ -4,8 +4,22 @@ Admin-Fast
 前端技术选型：Vite、Vue3、TS、Arco Design、
 后端：Node、Nest、Mysql、
 
-#### Husky Lint-staged
-
+#### 一.Husky https://typicode.github.io/husky/zh/
+> 是一个Git 钩子工具，它允许你在Git 仓库中定义脚本，在特定的Git 事件发生时自动执行这些脚本。
+#### 二.Lint-staged https://github.com/lint-staged/lint-staged
+> lint-staged 是一个在git 暂存文件上（也就是被 git add 的文件）运行已配置的linter（或其他）任务。
+#### 三.Commitlint https://commitlint.js.org/
+> commitlint 是一个用于检查 git commit -m 信息是否符合规范的工具。
+##### 3.1 cz-git https://cz-git.qbb.sh/zh/
+> 是一个基于 commitlint 的工具，它可以帮助你在提交代码时自动生成符合规范的 commit 信息。工程性更强，轻量级，高度自定义.
+#### 四.Prettier https://www.prettier.cn/
+> prettier 是一个代码格式化工具，它可以自动将代码格式化为统一的风格，从而提高代码的可读性和可维护性。
+#### 五.Eslint https://eslint.nodejs.cn/
+> eslint 是一个代码检查工具，它可以检查代码中的语法错误、代码风格错误等问题，并给出相应的提示
+#### 六.Stylelint https://stylelint.io/
+>一个 CSS 代码检查工具，它可以检查 CSS 代码中的语法错误、代码风格错误等问题，并给出相应的提示。
+#### 七.Editorconfig https://editorconfig.org/
+> 是一个代码风格规范的工具，它可以帮助开发者在不同的编辑器中保持一致的代码风格，从而提高代码的可读性和可维护性。
 ```
 1.pnpm lint-staged husky -D
 

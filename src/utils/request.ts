@@ -1,4 +1,4 @@
-import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+// import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
 // axios配置
 export const config = {
     // 接口请求的地址

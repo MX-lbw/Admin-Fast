@@ -33,5 +33,6 @@ export default [
     },
   },
   //自动合并prettier.config.js配置
-  eslintPluginPrettierRecommended
+  eslintPluginPrettierRecommended,
+  {ignores: ['node_modules', 'dist']}
 ];

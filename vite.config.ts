@@ -12,11 +12,11 @@ import VueSetupExtend from 'vite-plugin-vue-setup-extend'
 //打包分析
 import { visualizer } from 'rollup-plugin-visualizer';
 // gzip压缩
-//import viteCompression from "vite-plugin-compression";
+import viteCompression from "vite-plugin-compression";
 // 数据mock配置
 import { viteMockServe } from "vite-plugin-mock";
 // 代码检查
-import eslintPlugin from 'vite-plugin-eslint';
+// import eslintPlugin from 'vite-plugin-eslint';
 //Vue 开发调试定位工具
 import VueDevToolsPlugin from 'vite-plugin-vue-devtools';
 //@see  https://vitejs.dev/config/
@@ -27,7 +27,7 @@ const env = loadEnv(mode, process.cwd());
     plugins: [
       vue(),
       AutoImport({
-        imports: ['vue', 'vue-router'],
+        imports: ['vue', 'vue-router','pinia'],
         resolvers: [ArcoResolver()],
       }),
       Components({
@@ -45,13 +45,16 @@ const env = loadEnv(mode, process.cwd());
         logger: true, //是否在控制台显示请求日志
         enable: command === "serve", //设置是否启用本地 xxx.ts 文件，不要在生产环境中打开它.设置为 false 将禁用 mock 功能
       }),
-      eslintPlugin({
-        include: ['src/**/*.js', 'src/**/*.vue', 'src/**/*.ts'],    // 指定需要检查的文件
-        exclude: ['node_modules/**', 'dist/**'],    // 指定不需要检查的文件
-        fix: true,    // 是否自动修复
-        cache: false    // 是否启用缓存
+      // eslintPlugin({
+      //   include: ['src/**/*.js', 'src/**/*.vue', 'src/**/*.ts'],    // 指定需要检查的文件
+      //   exclude: ['node_modules/**', 'dist/**'],    // 指定不需要检查的文件
+      //   fix: true,    // 是否自动修复
+      //   cache: false    // 是否启用缓存
+      // }),
+      visualizer({
+        open: true, //注意这里要设置为true，否则无效
       }),
-      visualizer(),
+      viteCompression(),
       removeConsole(),
       VueSetupExtend(),
       VueDevToolsPlugin({
